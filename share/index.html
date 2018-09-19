@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>share</title>
+    <script>
+      setSize();
+      window.addEventListener("resize", setSize, false);
+      window.addEventListener("orientationchange", setSize, false);
+      function setSize(){
+        var html = document.getElementsByTagName('html')[0];
+        var pageWidth = html.getBoundingClientRect().width;
+
+        if(pageWidth > 640){
+          pageWidth = 550;
+          html.style.fontSize = pageWidth / 7 + 'px';
+        }else{
+          html.style.fontSize = pageWidth / 3.75 + 'px';
+        }
+
+      }
+    </script>
+    <script src="static/js/test.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script src="./static/js/test.js"></script>
+  </body>
+</html>
